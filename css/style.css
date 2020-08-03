@@ -1,0 +1,809 @@
+body
+{
+	font-family: sans-serif;
+}
+
+.container
+{
+	width: 100%;
+
+}
+
+/*kalo mau ganti header supaya tidak nempel di atas walaupun discroll, tinggal
+hilangkan position fixed pada setiap div yang ada pada header dan pada header tinggal kasih height saja*/
+
+
+/*-----------------HEADER-----------------*/
+
+.header
+{
+	
+	top: 0;
+	left: 0;
+	right: 8px;
+	height: 60px;
+	position: fixed;
+	background-color: white;
+
+}
+
+
+.logo
+{
+	width: 20%;
+	float: left;
+	box-sizing: border-box;
+	position: fixed;
+	
+
+	
+	
+}
+.logo h1
+{
+	margin-top: 17px;
+	margin-left: 50px;
+	font-size: 40px;
+	color: #3b8ecd;
+	color: rgba(10,60,150, 0.8);
+	text-shadow: 1px 4px 6px #def, 
+	    		 0px 0px 0px #000, 
+	    		 1px 4px 6px #def;
+
+}
+
+.menu 
+{
+	width: 80%;
+	float: left;
+	box-sizing: border-box;
+	position: fixed;
+	margin-left: 300px;
+	
+	
+	
+}
+
+.menu a
+{
+	text-decoration: none;
+	font-size: 15px;
+	padding: 2px;
+	color: black;
+	font-weight: bold;
+
+}
+.menu a:hover
+{
+	text-decoration: underline;
+	color:orange;
+	background-color: black;
+
+}
+.menu ul li
+{
+	
+	padding: 15px;
+	margin-right: 25px
+	float: left;
+	margin-top: -3px;
+	display: inline-block;
+	margin-left: -10px;
+	font-size: 23px;
+
+
+}
+.menu ul li[id='daftar']
+{
+	margin-left: 442px;
+}
+.menu ul li[id='login']
+{
+	margin-left: 0px;
+}
+
+
+/*------------------HOME-------------------*/
+
+
+.home
+{
+	width: 100%;
+	height: 585px;
+	background-size: cover;
+	background-image: url(../img/bg.png);
+	background-position: 0 -30px;
+	margin-top: 50px;
+}
+
+.keterangan
+{
+	width: 60%;
+	float: left;
+}
+
+.keterangan h1
+{
+	font-size: 45px;
+	margin-left: 80px;
+	margin-top: 170px;
+	color: #3b8ecd;
+	text-shadow: -2px 2px 3px grey;
+
+}
+
+
+.keterangan p
+{
+	margin-left: 80px;
+	margin-top: -10px;
+	font: 20px/30px arial;
+	
+}
+.keterangan button
+{
+	margin-left: 80px;
+	background-color: #3b8ecd;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	height: 35px;
+	width: 160px;
+
+
+}
+
+.animasi img
+{
+	height: 300px;
+	width: 300px;
+	margin-left: 80px;
+	margin-top: 120px;
+}
+
+
+
+/*-------------------ABOUT-----------------*/
+
+.about
+{
+	width: 100%;
+	height: 635px;
+	
+}
+
+.about h1
+{
+	text-align: center;
+	margin-top: 20px;
+}
+.about h2
+{
+	margin-left: 370px;
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 16px;
+	text-shadow: 5px 5px 10px grey;
+}
+
+
+.dongeng,
+.kontes,
+.parenting,
+.club
+{
+	width: 20%;
+	float: left;
+	margin-top: 45px;
+}
+
+.dongeng
+{
+	margin-left: 80px;
+}
+
+
+.kontes,
+.parenting,
+.club
+{
+	margin-left: 40px;
+}
+
+.dongeng a img,
+.kontes a img,
+.parenting a img,
+.club a img
+{
+	width: 230px;
+	height: 230px;
+	box-shadow: 12px 12px 0px 3px #3b8ecd;
+}
+
+
+.dongeng h2,
+.kontes h2,
+.parenting h2,
+.club h2
+{
+	margin-top: 50px;
+	margin-left: 3px;
+	font-size: 20px;
+	font-style: normal;
+	text-shadow: none;
+}
+
+.dongeng span,
+.kontes span,
+.parenting span,
+.club span
+{
+	font-weight: bold;
+	display: block;
+	background-color: rgba(200,200,200,.3);
+	position: absolute;
+	top: 790px;
+	text-align: center;
+	line-height: 230px;
+	color: #333;
+	text-shadow: 1px 1px 1px #ddd;
+	opacity: 0;
+	transform: scale(0) rotate(0);
+	transition: .3s;
+	width: 230px;
+	height: 230px;
+}
+
+.fitur a:hover span
+{
+	opacity: 1;
+	transform: scale(1) rotate(360deg);
+}
+
+
+.overlay{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0);
+	z-index: 9999;
+	text-align: center;
+	transition: .8s;
+	padding: 100px;
+
+}
+
+.overlay:target
+{
+	width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.7);
+}
+
+.overlay img
+{
+	max-height: 100%;
+	box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+
+}
+
+.overlay:target img
+{
+	animation: fadeAja 1s;
+}
+
+.overlay .close
+{
+	top: 60px;
+	left: 50%;
+	position: absolute;
+	margin-left: -30px;
+	color:white;
+	text-decoration: none;
+	background-color: lightskyblue;
+	border:1px solid white;
+	line-height: 14px;
+	padding: 8px;
+	opacity: 0;
+}
+
+.overlay:target .close
+{
+	
+	animation: slideDownFade .5s .5s forwards;
+
+}
+
+.overlay:target .next 
+{
+	animation: fadeAja .5s .5s forwards;
+	opacity: 1;
+
+}
+.overlay:target .prev
+{
+	animation: fadeAja .5s .5s forwards;
+	opacity: 1;
+
+}
+
+
+
+/*--------------Navigasi------------*/
+
+.next
+{
+	width: 80px;
+	height: 80px;
+	background-image: url(../img/next.png);
+	position: absolute;
+	text-indent: -9999px;
+	top: 45%;
+	margin-left: 10px;
+	opacity: 0;
+}
+
+.prev
+{
+	width: 80px;
+	height: 90px;
+	background-image: url(../img/prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	text-indent: -9999px;
+	top: 45%;
+	margin-left: -100px;
+	opacity: 0;
+}
+
+
+
+
+/*-----------------------CONTACT--------------*/
+
+.contact
+{
+	background-image: url(../img/bg2.png);
+	background-position: 0 -30px;
+	background-size: cover;
+	height: 585px;
+}
+
+.contact h1
+{
+	text-align: center;
+	margin-top: 23px;
+}
+
+
+
+
+.anim
+{
+	float: left;
+	width: 30%;
+	margin-right: 50px;
+}
+
+.anim img
+{
+	margin-left: 190px;
+	margin-top: 10px;
+	width: 215px;
+	height:490px;
+}
+
+
+.isian
+{
+	width: 30%;
+	float:left;
+	margin-left: 25px;
+}
+.us
+{
+	background-color: #3b8ecd;
+	align-items: center;
+	width: 350px;
+	height: 320px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 70px;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 2px solid grey;
+
+}
+
+.us h2
+{
+	text-align: center;
+	color: white;
+}
+.us label
+{
+	padding: 5px;
+	font-family: sans-serif;
+	align-items: center;
+	margin-left: 18px;
+	font-size: 15px;
+	color: white;
+
+}
+.us input
+{
+	margin-bottom: 7px;
+	margin-left: 18px;
+	height: 20px;
+	width: 270px;
+	border-radius: 4px;
+	background-color: #e4e4e4;
+
+}
+
+.us input[type="text"]
+{
+
+	height: 100px;
+
+}
+.us button
+{
+	
+	font-family: sans-serif;
+	align-items: center;
+	font-size: 13px;
+	font-weight: bold;
+	color:  #3b8ecd;
+	width: 75px;
+	height: 30px;
+	border-radius: 5px;
+	margin-top: 8px;
+	margin-left: 120px;
+	background-color: #e4e4e4;
+}
+
+
+.identitas
+{
+	background-color:#e4e4e4;
+	float:right;
+	width: 20%;
+	height: 350px;
+	margin-right: 80px;
+	margin-top: 35px;
+	box-shadow: 0 30px 10px -15px grey,
+				-1px -1px 1px 2px grey,
+				1px 1px 1px 2px grey;
+	transition: 1s;
+}
+
+.identitas:hover
+{
+	box-shadow: 0px 80px 10px -40px rgba(0, 0, 230, .75);
+	margin-top: 20px;
+
+}
+
+.identitas h1
+{
+	font-size: 20px;
+	margin-top: 8px;
+
+}
+
+.identitas img
+{
+	margin-left: 86px;
+	margin-top: 0px;
+	box-shadow: 3px 3px 4px grey,
+				-3px -3px 4px grey;
+}
+.identitas p
+{
+	margin-left: 5px;
+}
+
+.identitas table
+{
+	margin-top: 15px;
+}
+
+.identitas th,
+.identitas td
+{
+	font-weight: normal;
+	font-size: 15px;
+	text-align: left;
+}
+
+
+/*-------------------MORE-------------------*/
+
+.more
+{
+
+	height: 600px;
+	background-color: blue;
+	background-image: url(../img/bgmore.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.more img
+{
+	margin-left: 200px;
+	margin-top: 120px;
+}
+
+
+
+/*--------------------FOOTER---------------*/
+
+footer
+{
+	margin-top: 230px;
+	background-color: #3b8ecd;
+	color:white;
+	text-shadow: 2px 2px 2px 2px grey,
+				-2px -2px 2px 2px grey;
+	text-align: center;
+	padding: 10px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------Animasi---------*/
+@keyframes zoomDanFade
+{
+	0%
+	{
+		transform: scale(0);
+		opacity: 0;
+	}
+	100%
+	{
+		transform: scale(1);
+		opacity: 1;
+
+	}
+}
+@keyframes slideDownFade  
+{
+	0%
+	{
+		opacity: 0;
+		margin-top: -20px;
+	}
+	100%
+	{
+		opacity: 1;
+		margin-top: 0;
+	}
+
+}
+
+@keyframes fadeAja
+{
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+
+}
+
+
+
+
+
+/*Ini adalah untuk micro clearfix*/
+
+/*Setelah menggunakan float, jangan lupa dihentikan floatnya dengna clearfix
+*/
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+@media screen and (max-width: 1000px)
+{
+	.logo,
+	.menu,
+    .keterangan,
+    .animasi,
+    .dongeng,
+    .kontes,
+    .parenting,
+    .club,
+    .anim,
+    .isian	{
+		width: 100%;
+		padding: 0;
+	}
+	.home
+	{
+		background-image: none;
+		margin-top: 0px;
+	}
+
+	.keterangan p
+	{
+		font-size: 17px;
+	}
+
+	.menu
+	{
+		margin-left: 170px;
+	}
+	.menu a
+	{
+		text-decoration: none;
+		font-size: 13px;
+		color: black;
+		font-weight: bold;
+
+	}
+	.menu ul li[id='daftar']
+	{
+		margin-left: -13px;
+	}
+	.menu ul li[id='login']
+	{
+		margin-left: -13px;
+	}
+	.menu ul li
+	{
+		margin-right: -10px;
+	}
+	
+	.contact
+	{
+		overflow: hidden;
+	}
+	.animasi img
+	{
+		margin-top: 150px;
+		margin-left: 110px;
+	}
+
+	.logo h1
+	{
+		margin-left: 30px;
+	}
+
+	
+	.more
+	{
+		overflow: hidden;
+	}
+
+	.about h1
+	{
+		margin-top: 370px;
+
+	}
+	.about h2
+	{
+		margin-left: 25px;
+		text-align: center;
+	}
+	.dongeng img
+	{
+		margin-left: 70px;
+	}
+	.kontes img,
+	.parenting img,
+	.club img
+	{
+		margin-left: 110px;
+	}
+	.dongeng h2
+	{
+		margin-left: -170px;
+	}
+	.dongeng p
+	{
+		margin-left: -42px;
+		margin-right: 50px;
+	}
+	.kontes h2
+	{
+		margin-left: -100px;
+	}
+	.parenting h2,
+	.club h2
+	{
+		margin-left: -50px;
+	}
+	.contact
+	{
+		background-image: none;
+		margin-top: 50px;
+	}
+	.contact h1
+	{
+		margin-top: 300px;
+	}
+
+	.footer
+	{
+		margin-top: -200px;
+	}
+
+	.dongeng span
+	{
+		margin-top:325px; 
+		margin-left: 70px;
+	}
+	.kontes span
+	{
+		margin-top:747px; 
+		margin-left: 110px;
+	}
+	.parenting span
+	{
+		margin-top:1167px; 
+		margin-left: 110px;
+	}
+	.club span
+	{
+		margin-top:1586px; 
+		margin-left: 110px;
+	}
+	.prev
+	{
+		margin-left: -45px;
+		background-image: url(../img/prevs.png);
+	}
+	.next
+	{
+		margin-left: 16px;
+		background-image: url(../img/nexts.png);
+		background-repeat: no-repeat;
+	}
+	.overlay img
+	{
+		margin-left: 10px;
+	}
+
+	
+}
